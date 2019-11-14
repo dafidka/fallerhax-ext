@@ -1,0 +1,8 @@
+﻿  Main.cpp
+C:\Users\Dafid\source\repos\csgo1\csgo1\Main.cpp(100,25): warning C4804:  '<': unsafe use of type 'bool' in operation
+  Generating code
+  4 of 1157 functions ( 0.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    2 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  csgo1.vcxproj -> C:\Users\Dafid\source\repos\csgo1\Release\csgo1.exe

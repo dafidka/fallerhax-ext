@@ -1,0 +1,4 @@
+﻿  Main.cpp
+C:\Users\Dafid\source\repos\csgo1\csgo1\Main.cpp(151,27): warning C4804:  '<': unsafe use of type 'bool' in operation
+C:\Users\Dafid\source\repos\csgo1\csgo1\Main.cpp(139,4): warning C4809:  switch statement has redundant 'default' label; all possible 'case' labels are given
+  csgo1.vcxproj -> C:\Users\Dafid\source\repos\csgo1\Debug\csgo1.exe

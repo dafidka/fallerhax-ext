@@ -66,7 +66,7 @@ DWORD* GetModule(const char* moduleName, unsigned long ProcessID)
 }
 
 
-void fov(bool enabledFovChanger, bool isScoped, HANDLE pHandle, DWORD localP, DWORD myFov, DWORD defaultFov)
+/*void fov(bool enabledFovChanger, bool isScoped, HANDLE pHandle, DWORD localP, DWORD myFov, DWORD defaultFov)
 {
 	if (enabledFovChanger) {
 		if (!isScoped)
@@ -85,7 +85,7 @@ void fov(bool enabledFovChanger, bool isScoped, HANDLE pHandle, DWORD localP, DW
 
 		}
 	}
-};
+};*/
 
 void trigger(HANDLE pHandle, DWORD localP, int lookingAt, DWORD baseAddr, DWORD addrOfLookingAt, DWORD playerInCrossHealth, DWORD playerInCrossTeam, int myTeam, int forceattackdown, int forceattackup)
 {
@@ -208,13 +208,13 @@ int main()
 
 	void ConsoleVisibility();
 	{
-		::ShowWindow(::GetConsoleWindow(), SW_SHOW);
+		//::ShowWindow(::GetConsoleWindow(), SW_HIDE);
 	};
 
 
 
 	int processID = GetPID("csgo.exe");
-	DWORD* module = GetModule("client_panorama.dll", processID);
+	DWORD* module = GetModule("client.dll", processID);
 
 	//HWND hWnd = FindWindowA(0, ("Counter-Strike:  Global Offensive"));
 	HANDLE pHandle = OpenProcess(PROCESS_ALL_ACCESS, FALSE, processID);
@@ -264,7 +264,7 @@ int main()
 	DWORD lookAtWpn;
 
 	ReadProcessMemory(pHandle, (LPCVOID)(baseAddr + dwLocalPlayer), &localP, sizeof(localP), 0);  //localP
-	ReadProcessMemory(pHandle, (LPVOID)(localP + m_iFOV), &defaultFov, sizeof(defaultFov), 0);
+	//ReadProcessMemory(pHandle, (LPVOID)(localP + m_iFOV), &defaultFov, sizeof(defaultFov), 0);
 
 	while (true)
 	{
@@ -284,7 +284,7 @@ int main()
 
 
 
-		std::future<void> fut = std::async(fov, enabledFovChanger, isScoped, pHandle, localP, myFov, defaultFov);
+		//std::future<void> fut = std::async(fov, enabledFovChanger, isScoped, pHandle, localP, myFov, defaultFov);
 
 		std::future<void> fut2 = std::async(trigger, pHandle, localP, lookingAt, baseAddr, addrOfLookingAt, playerInCrossHealth, playerInCrossTeam, myTeam, forceattackdown, forceattackup);
 
@@ -398,7 +398,7 @@ int main()
 		}
 
 
-		fut;
+		//fut;
 		fut2;
 		fut3;
 		fut4;

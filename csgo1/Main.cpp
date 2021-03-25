@@ -1,6 +1,8 @@
 #include <Windows.h>
 #include <TlHelp32.h>
-#include "offsets.h"
+//#include "offsets.h"
+#include "C:\Users\Dafid\Desktop\hazedumper\csgo.hpp"
+
 //#include <iostream>
 //#include <string>
 #include <future>

@@ -1,6 +1,6 @@
 ﻿  Main.cpp
-C:\Users\Dafid\source\repos\csgo1\csgo1\Main.cpp(100,9): warning C4804: '<': unsafe use of type 'bool' in operation
-C:\Users\Dafid\source\repos\csgo1\csgo1\Main.cpp(247,8): warning C4101: 'defaultFov': unreferenced local variable
+C:\Users\Dafid\source\repos\csgo1\csgo1\Main.cpp(102,9): warning C4804: '<': unsafe use of type 'bool' in operation
+C:\Users\Dafid\source\repos\csgo1\csgo1\Main.cpp(249,8): warning C4101: 'defaultFov': unreferenced local variable
   Generating code
   4 of 1024 functions ( 0.4%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
